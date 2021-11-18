@@ -5,32 +5,43 @@
 class Uc < Formula
   desc "Utility to update jenkins plugin.txt"
   homepage ""
-  version "0.1.3"
-  bottle :unneeded
+  version "0.1.4"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/jenkins-infra/uc/releases/download/0.1.3/uc-darwin-amd64.tar.gz"
-      sha256 "473ba5d706359b518bd66ca919d36c0a7155d50933643263919225411e3731bf"
+      url "https://github.com/jenkins-infra/uc/releases/download/0.1.4/uc-darwin-amd64.tar.gz"
+      sha256 "23a92a3542a68d5f9d9b035ccaae2ecf1a62d9c7aa0dd026e4545c8a6485297c"
+
+      def install
+        bin.install "uc"
+      end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/jenkins-infra/uc/releases/download/0.1.3/uc-darwin-arm64.tar.gz"
-      sha256 "637d6ae8fc17c21327f44be93f8114691677310955b90463712eba0ab02eeabd"
+      url "https://github.com/jenkins-infra/uc/releases/download/0.1.4/uc-darwin-arm64.tar.gz"
+      sha256 "c1dd82be85602a05f32c7bb4d0eb9f508ce85fafc2c854a881318892b81a7ca4"
+
+      def install
+        bin.install "uc"
+      end
     end
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/jenkins-infra/uc/releases/download/0.1.3/uc-linux-amd64.tar.gz"
-      sha256 "1cb11b7e76dbc6c271d2fca659a6c6d6fc8e126ded78dc1edd175027e4099b5c"
-    end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jenkins-infra/uc/releases/download/0.1.3/uc-linux-arm64.tar.gz"
-      sha256 "ae92bd665dc3cc2e9ca0718707052e35e4f58d3155fd740744a478269303473e"
-    end
-  end
+      url "https://github.com/jenkins-infra/uc/releases/download/0.1.4/uc-linux-arm64.tar.gz"
+      sha256 "8068ded340de71d4c17e6e3ccdd6f398d9cdd8602d2a89c01318d920d4111acb"
 
-  def install
-    bin.install "uc"
+      def install
+        bin.install "uc"
+      end
+    end
+    if Hardware::CPU.intel?
+      url "https://github.com/jenkins-infra/uc/releases/download/0.1.4/uc-linux-amd64.tar.gz"
+      sha256 "66dd9347673992b518f6d5fe27b46869ac80d04e770e66bc3269396017d87e83"
+
+      def install
+        bin.install "uc"
+      end
+    end
   end
 end
