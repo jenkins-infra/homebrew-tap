@@ -10,7 +10,7 @@ class Jv < Formula
   on_macos do
     if Hardware::CPU.arm?
       url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-darwin-arm64.tar.gz"
-      sha256 "e8f23c9991b9664ebe0576e0b652a4f605ef2424f122307c698823a0da151cda"
+      sha256 "c13816b5730512fd3e5c19309350f1112c1491be75811e6731043047b77bb10a"
 
       def install
         bin.install "jv"
@@ -18,7 +18,7 @@ class Jv < Formula
     end
     if Hardware::CPU.intel?
       url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-darwin-amd64.tar.gz"
-      sha256 "66a66f87077d9f0fed3919efdaae6434963aeb775bd1afbe44df60b4634cc51e"
+      sha256 "2762bd636e0ea174add6482514813bd099fdb53a8c5e19960598082c42c7371f"
 
       def install
         bin.install "jv"
@@ -27,17 +27,17 @@ class Jv < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-linux-arm64.tar.gz"
-      sha256 "9892676c28e40b7c5dfa8e0c08174fc1575780309c113d0ad5faf68d83e10dfd"
+    if Hardware::CPU.intel?
+      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-linux-amd64.tar.gz"
+      sha256 "8af20051936e8fa0ffebda74ae48796ce8f999b6c9b1c2085f2de5d826158bd1"
 
       def install
         bin.install "jv"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-linux-amd64.tar.gz"
-      sha256 "3a51ec14f6db4a24c7a788812c29005da271f7c59a2786039c72fd317056a37c"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.2.1/jenkins-version-linux-arm64.tar.gz"
+      sha256 "e6eb8b965c36061af48d11cfd1782ecc62742e648fa472983d7069a407a3037e"
 
       def install
         bin.install "jv"
