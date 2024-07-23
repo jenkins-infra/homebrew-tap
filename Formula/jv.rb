@@ -5,20 +5,20 @@
 class Jv < Formula
   desc "Determine a Jenkins Version"
   homepage "https://github.com/jenkins-infra/jenkins-version"
-  version "0.6.3"
+  version "0.6.4"
 
   on_macos do
     on_intel do
-      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.3/jenkins-version-darwin-amd64.tar.gz"
-      sha256 "679608481d75e397884ed691773ece84c69a2e37f2a4be1b28bc844954d4ed89"
+      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.4/jenkins-version-darwin-amd64.tar.gz"
+      sha256 "c0f641522d5406b0c3eb2a98f10c73f3888024f18f8f7d05efff0374c2217b85"
 
       def install
         bin.install "jv"
       end
     end
     on_arm do
-      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.3/jenkins-version-darwin-arm64.tar.gz"
-      sha256 "4d0b26fa3a71ac2234a3cda9a0b532d0987a91fe0e8e084cde8758ec76fb00be"
+      url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.4/jenkins-version-darwin-arm64.tar.gz"
+      sha256 "c14a188806c3aa63c385e621b9bbe6748228be197a6d1c8a971296bcc0fd201b"
 
       def install
         bin.install "jv"
@@ -29,8 +29,8 @@ class Jv < Formula
   on_linux do
     on_intel do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.3/jenkins-version-linux-amd64.tar.gz"
-        sha256 "448bd57a5f7f9985e338335639cca7cd4e7b46812e379384d8841ba52a742cc9"
+        url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.4/jenkins-version-linux-amd64.tar.gz"
+        sha256 "842e0ac6882613ba1953a2e31988e69a2fdc6f0c50d8aefc100009808d25b7c4"
 
         def install
           bin.install "jv"
@@ -39,8 +39,8 @@ class Jv < Formula
     end
     on_arm do
       if Hardware::CPU.is_64_bit?
-        url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.3/jenkins-version-linux-arm64.tar.gz"
-        sha256 "ae47565146c7c547aa9a3c307c93a70569f9bc5365eb34e09f84229491201b61"
+        url "https://github.com/jenkins-infra/jenkins-version/releases/download/0.6.4/jenkins-version-linux-arm64.tar.gz"
+        sha256 "5e194650338223f066d715cef8a51005ac162af07a595d7c60b1352054b9a14b"
 
         def install
           bin.install "jv"
