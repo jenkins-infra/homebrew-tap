@@ -2,15 +2,15 @@ class PluginModernizer < Formula
     desc "Plugin Modernizer"
     # Note: Brew don't really like our versions scheme for CD. Implicitly it consider 499.vb_86f97f0b_197 as version 197 which is incorrect
     # So using version which  only first numeric part for CD
-    version "2327.va_b_b_64341482b_".split(".")[0]
+    version "2360.v08fa_21f26720".split(".")[0]
     homepage "https://github.com/jenkins-infra/plugin-modernizer-tool"
-    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2327.va_b_b_64341482b_/jenkins-plugin-modernizer-2327.va_b_b_64341482b_.jar"
-    sha256 "b09dfc29828d0c2c882fadf2ab301a71afa9bbfd673304a5923e5f7c569bc290"
+    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2360.v08fa_21f26720/jenkins-plugin-modernizer-2360.v08fa_21f26720.jar"
+    sha256 "5c3849247eb58c175c2bb56ac902e60f5d75cdaa32f6c2a3d85959b2e7b9210e"
     license "MIT"
 
     def install
-      libexec.install "jenkins-plugin-modernizer-2327.va_b_b_64341482b_.jar"
-      bin.write_jar_script libexec/"jenkins-plugin-modernizer-2327.va_b_b_64341482b_.jar", "plugin-modernizer"
+      libexec.install "jenkins-plugin-modernizer-2360.v08fa_21f26720.jar"
+      bin.write_jar_script libexec/"jenkins-plugin-modernizer-2360.v08fa_21f26720.jar", "plugin-modernizer"
     end
 
     test do
