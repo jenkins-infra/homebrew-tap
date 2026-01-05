@@ -2,15 +2,15 @@ class PluginModernizer < Formula
     desc "Plugin Modernizer"
     # Note: Brew don't really like our versions scheme for CD. Implicitly it consider 499.vb_86f97f0b_197 as version 197 which is incorrect
     # So using version which  only first numeric part for CD
-    version "2570.vb_5e465280177".split(".")[0]
+    version "2577.v22942478c5fc".split(".")[0]
     homepage "https://github.com/jenkins-infra/plugin-modernizer-tool"
-    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2570.vb_5e465280177/jenkins-plugin-modernizer-2570.vb_5e465280177.jar"
-    sha256 "bc5d7c9a4633bcf1aedc4b7a0b9ec332027d595b1de86d59ee8dfbe890cf5b71"
+    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/2577.v22942478c5fc/jenkins-plugin-modernizer-2577.v22942478c5fc.jar"
+    sha256 "7c4fe0c5136177d64bf2d87c9c92ec24abfcba6881f225fb3774fce91cb8191b"
     license "MIT"
 
     def install
-      libexec.install "jenkins-plugin-modernizer-2570.vb_5e465280177.jar"
-      bin.write_jar_script libexec/"jenkins-plugin-modernizer-2570.vb_5e465280177.jar", "plugin-modernizer"
+      libexec.install "jenkins-plugin-modernizer-2577.v22942478c5fc.jar"
+      bin.write_jar_script libexec/"jenkins-plugin-modernizer-2577.v22942478c5fc.jar", "plugin-modernizer"
     end
 
     test do
