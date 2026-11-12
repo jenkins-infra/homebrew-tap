@@ -2,15 +2,15 @@ class PluginModernizer < Formula
     desc "Plugin Modernizer"
     # Note: Brew don't really like our versions scheme for CD. Implicitly it consider 499.vb_86f97f0b_197 as version 197 which is incorrect
     # So using version which  only first numeric part for CD
-    version "3255.v1b_e36cc2c10d".split(".")[0]
+    version "3305.v25f9a_966fc07".split(".")[0]
     homepage "https://github.com/jenkins-infra/plugin-modernizer-tool"
-    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/3255.v1b_e36cc2c10d/jenkins-plugin-modernizer-3255.v1b_e36cc2c10d.jar"
-    sha256 "e69ac90ffc49499cc3e084ee5d66a353db0802671357e4e6718c0c9e6fa4a79c"
+    url "https://github.com/jenkins-infra/plugin-modernizer-tool/releases/download/3305.v25f9a_966fc07/jenkins-plugin-modernizer-3305.v25f9a_966fc07.jar"
+    sha256 "d0c8d6099b824e650d209dc8b6ed5fbb7f474518545f9456e9513a95a998af60"
     license "MIT"
 
     def install
-      libexec.install "jenkins-plugin-modernizer-3255.v1b_e36cc2c10d.jar"
-      bin.write_jar_script libexec/"jenkins-plugin-modernizer-3255.v1b_e36cc2c10d.jar", "plugin-modernizer", "--add-opens=java.base/java.lang=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow"
+      libexec.install "jenkins-plugin-modernizer-3305.v25f9a_966fc07.jar"
+      bin.write_jar_script libexec/"jenkins-plugin-modernizer-3305.v25f9a_966fc07.jar", "plugin-modernizer", "--add-opens=java.base/java.lang=ALL-UNNAMED --sun-misc-unsafe-memory-access=allow"
     end
 
     test do
